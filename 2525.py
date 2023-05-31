@@ -1,14 +1,12 @@
-h = int(input())
-m = int(input())
-t = int(input())
-
-if h == 23 and m+t == 60:
-    print("띵동댕동")
+a, b = map(int, input().split())
+c = int(input())
+d = 0
+if b+c >= 60:
+    d = (b+c)//60
+    a = a+d
+    b = b+c-(60*d)
 else:
-    if m+t > 60:
-        if h == 23:
-            print(0, (m+t)-60)
-        else:
-            print(h+1, (m+t)-60)
-    else:
-        print(h, (m+t))
+    b = b+c
+if a >=24:
+    a = a-24
+print(a, b)
